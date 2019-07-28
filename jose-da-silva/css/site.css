@@ -1,0 +1,143 @@
+body {
+	font-family: "Crimson Text", "Times New Roman", serif;
+	background-color: #F2FFFC;
+	font-size: 120%;
+	line-height: 1.5;
+}
+
+h1, h2 {
+	clear: both;
+	font-family: "Open Sans Condensed", "Arial", sans-serif;
+}
+
+main h1 {
+	text-align: center;
+	background-color: #851944;
+	color: #FFF;
+	padding: 25px;
+	border-bottom: 10px solid black;
+	font-size: 60px;
+	text-transform: uppercase;
+}
+
+p {
+	text-align: justify;
+	margin: 20px 0;
+}
+
+blockquote {
+	background-color: #D9E5E3;
+	border: 10px solid #C2CCCA;
+	width: 250px;
+	box-sizing: border-box;
+	margin: 20px 40px;
+}
+
+.fiat {
+	float: right;
+	margin-right: 0;
+}
+
+.petrobras {
+	float: left;
+	margin-left: 0;
+}
+
+aside {
+	background-color: #3C1D3D;
+	color: #F2FFFC;
+}
+
+footer {
+	background-color: #000;
+	bottom: 0;
+	clear: both;
+	color: #F2FFFC;
+	position: fixed;
+	width: 100%;
+}
+
+nav a {
+	color: #F2FFFC;
+}
+
+main a {
+	color: #851944;
+}
+
+aside a {
+	color: inherit;
+	font-family: "Open Sans Condensed", sans-serif;
+}
+
+blockquote, aside, footer {
+    padding: 20px;
+}
+
+main .container {
+	width: 720px;
+	margin: auto;
+	padding: 30px 0;
+	padding-bottom: 60px;
+}
+
+
+aside, .minha-foto {
+	border: 10px solid #000;
+	box-sizing: border-box;
+	position: absolute;
+	right: 0;
+}
+
+aside {
+	box-sizing: border-box;
+	clear: both;
+	text-align: center;
+	top: 290px;
+}
+
+.minha-foto {
+	height: 300px;
+	top: 0;
+	width: 300px;
+}
+
+.icones-sociais li {
+	display: inline-block;
+}
+
+.icones-sociais a {
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	text-indent: -9999px;
+}
+
+.github {
+	background-image: url("../img/github.png");
+}
+
+.twitter {
+	background-image: url("../img/twitter.png");
+}
+
+.linkedin {
+	background-image: url("../img/linkedin.png");
+}
+
+aside h1 {
+	font-size: 30px;
+	margin-bottom: 25px;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+h2 {
+	font-size: 30px;
+}
