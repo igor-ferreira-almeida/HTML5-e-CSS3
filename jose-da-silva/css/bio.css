@@ -78,3 +78,37 @@ main .container > p:first-child:first-letter {
     color: #FFF;
     margin-right: 0.2ch;
 }
+
+
+.habilidades { 
+    border-collapse: separate;
+    border-spacing: .25em;
+    font-size: 0.7em;
+    width: 100%;
+}
+tr:nth-child(2n - 1) {
+    background-color: #EEE;
+}
+
+th, td {
+    border: .2em solid #000;
+    padding: .4em;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #3C1D3D;
+    color: #FFF; 
+    font-weight: bold;
+}
+
+td:first-child {
+    background-color: #851944;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.habilidades [colspan] {
+    text-align: center;
+    font-style: italic;
+}
