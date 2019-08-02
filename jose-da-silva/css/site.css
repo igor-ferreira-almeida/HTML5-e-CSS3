@@ -1,3 +1,5 @@
+
+
 body {
     font-family: "Crimson Text", "Times New Roman", serif;
     background-color: #F2FFFC;
@@ -14,6 +16,7 @@ h2,
 h1 {
     text-transform: uppercase;
     font-size: 3em;
+    text-shadow: 5px 5px #000;
 }
 
 .titulo-principal {
@@ -43,6 +46,7 @@ main p {
     background-color: #3C1D3D;
     color: #F2FFFC;
     padding: 1em;
+    width: calc(0.9 * 300px);
 }
 
 .navegacao-site a {
@@ -57,7 +61,16 @@ main p {
 }
 
 .rodape-pagina {
-    background-color: #000;
+    background-image: radial-gradient(ellipse at left bottom,
+        rgba(60, 29, 61, 0.8),
+        rgba(60, 29, 61, 0.8) 65%,
+        black 65%,
+        black 70%,
+        transparent 70%,
+        transparent);
+    width:100%;
+    background-size: 25% 100%;
+    background-repeat: no-repeat;
     color: #F2FFFC;
     padding: 1em;
     clear: both;
@@ -107,7 +120,7 @@ em {
 }
 
 main {
-    width: 80%;
+    width: calc(100% - 0.9 * 300px);
     float: left;
     padding-bottom: 4em;
 }
@@ -120,7 +133,6 @@ main {
 }
 
 .navegacao-site {
-    width: 20%;
     float: right;
     position: relative;
     top: 300px;
@@ -131,4 +143,21 @@ main {
     top: 0;
     right: 0;
     height: 300px;
+}
+
+main a,
+footer a {
+    transition: 2s color;
+}
+
+main a:hover,
+main a:focus,
+footer a:hover,
+footer a:focus {
+    color: red;
+}
+
+.navegacao-site a:hover,
+.navegacao-site a:focus {
+    text-shadow: 0 0 2px pink;
 }

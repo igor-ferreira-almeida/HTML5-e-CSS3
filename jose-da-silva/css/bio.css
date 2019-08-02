@@ -5,14 +5,76 @@
     margin: 1em 2em;
     width: 30ch;
     box-sizing: border-box;
+    transition: 1s box-shadow, 1s transform;
+}
+
+.citacao-bio:before {
+    content: '“';
+    color: #BBB;
+    font-size: 10em;
+    line-height: .8;
+    position: absolute;
+
+}
+
+.citacao-bio p {
+    position: relative;
+}
+
+.citacao-bio:hover,
+.citacao-bio:focus {
+    box-shadow: 0 0 0 99999px rgba(0,0,0,.8);
+}
+
+.citacao-bio:nth-of-type(odd) {
+    float: right;
+}
+
+.citacao-bio:nth-of-type(even) {
+    float: left;
+}
+
+.citacao-bio:nth-of-type(odd):hover,
+.citacao-bio:nth-of-type(odd):focus {
+   
+    transform: scale(1.2) rotate(5deg);
+}
+
+.citacao-bio:nth-of-type(even):hover,
+.citacao-bio:nth-of-type(even):focus {
+    transform: scale(1.2) rotate(-5deg);
+}
+
+.icones-redes-sociais a {
+    position: relative;
+}
+
+.icones-redes-sociais a:hover::after,
+.icones-redes-sociais a:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    text-indent: 0;
+    width: 300%;
+    background: black;
+    font-size: .75em;
 }
 
 .petrobras {
-    float: left;
     margin-left: 0;
 }
 
 .fiat {
-    float: right;
     margin-right: 0;
+}
+
+main .container > p:first-child:first-letter {
+    font-size: 3em;
+    background-color: #851944;
+    padding: 0.15em;
+    border: 0.05em solid #000;
+    box-sizing: border-box;
+    color: #FFF;
+    margin-right: 0.2ch;
 }
