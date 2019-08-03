@@ -16,6 +16,15 @@ body {
 
 .palavras-home, .titulo-principal {
     transform-style: preserve-3d;
+    animation: aparece 2s;
+}
+
+@keyframes aparece {
+    /* podemos usar a palavra-chave "from" também no lugar de 0% */
+    from {
+        opacity: 0;
+        transform: scale(0.001);
+    }
 }
 
 .foto-home {
@@ -44,7 +53,28 @@ body {
 .saudacao em {
     color: #851944;
     font-size: 4em;
+    transform:  rotate(-5deg) skew(-10deg);
+    display: inline-block;
+    animation: flutua 1s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    position: relative;
 }
+
+.saudacao:hover em {
+    animation-play-state: paused;
+}
+
+
+@keyframes flutua {
+    from {
+        top: -5px;
+    }
+    to {
+        top: 5px;
+    }
+}
+
 .botao-index {
     font-size: 1.25em;
     background-color: #851944;
@@ -55,8 +85,15 @@ body {
     margin: 2em auto;
     display: block;
     text-align: center;
+    transition: .5s;
     box-shadow: 0 0 1em #000, inset 0 0 .5em #FFF;
 }
+.botao-index:hover, 
+.botao-index:focus {
+    color: #D5447E;
+    text-decoration: none;
+}
+
 .secao-inicio {
     padding: 2em;
 }
@@ -209,13 +246,6 @@ main {
     right: 0;
 }
 
-.saudacao em {
-    color: #851944;
-    font-size: 4em;
-    transform:  rotate(-5deg) skew(-10deg);
-    display: inline-block;
-}
-
 .eficiencia {
     top: 50%;
     left: 60%;
@@ -304,4 +334,7 @@ main {
     transform-origin: 0 0;
   /*  transform: translate(6.5754em, -2.4749em) rotate(45deg);*/
     transform: translate(calc(.707 * (3.5em - 100%) + 100%), calc(-.707 * 3.5em)) rotate(45deg);
+    animation: aparece 0.5s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
 }
