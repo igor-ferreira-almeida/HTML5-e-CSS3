@@ -6,6 +6,7 @@ html, body {
 }
 
 body {
+    display: block;
     perspective: 6px;
     perspective-origin: 50% 160px;
 }
@@ -122,11 +123,25 @@ body {
 }
 .trabalhos ul {
     display: flex;
-    border: .5em solid black;
 }
 .trabalhos li {
     flex: 1;
+    border: .5em solid black;
 }
+
+.trabalhos li:first-child {
+    order: 2;
+    transform: scale(1.2);
+}
+
+.trabalhos li:nth-child(2n) {
+    order: 1;
+}
+
+.trabalhos li:last-child {
+    order: 3;
+}
+
 .trabalhos img {
     width: 100%;
     display: block;
